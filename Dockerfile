@@ -48,8 +48,8 @@ ADD bin/start-mongo.sh /etc/service/mongo/run
 ADD bin/start-host-manager.sh /etc/service/host-manager/run
 ADD mongo-data /data/db
 ADD bin/start-redis.sh /etc/service/redis/run
-RUN chmod 755 /etc/service/tyk/run //etc/service/redis/run etc/service/tyk-dash/run /etc/service/mongo/run /etc/service/host-manager/run
-RUN sed -i 's/# masterauth <master-password>/masterauth kanin26/g' /etc/redis/redis.conf
+RUN chmod 755 /etc/service/tyk/run /etc/service/redis/run /etc/service/tyk-dash/run /etc/service/mongo/run /etc/service/host-manager/run
+#RUN sed -i 's/# masterauth <master-password>/masterauth kanin26/g' /etc/redis/redis.conf
 EXPOSE 3000 8080 5000
 WORKDIR /etc/tyk
 
