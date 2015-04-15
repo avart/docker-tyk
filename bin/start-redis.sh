@@ -6,4 +6,4 @@ fi
 
 cd /usr/local/redis
 sleep 1
-redis-server /etc/redis/redis.conf
+redis-server /etc/redis/redis.conf --requirepass kanin26
