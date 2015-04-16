@@ -37,7 +37,6 @@ RUN	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
 
 ADD configurations/tyk.conf /etc/tyk/
 ADD configurations/tyk_analytics.conf /etc/tyk/tyk-dash/tyk-analytics-v${TYK_DASH_VERSION}/
-ADD configurations/sample_api.json /etc/tyk/apps/
 ADD configurations/host_manager.json /etc/tyk/tyk-dash/tyk-analytics-v${TYK_DASH_VERSION}/host-manager/
 ADD bin/start-tyk.sh /etc/service/tyk/run
 ADD bin/start-tyk-dash.sh /etc/service/tyk-dash/run
