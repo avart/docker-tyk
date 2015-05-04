@@ -1,13 +1,13 @@
 FROM phusion/baseimage:0.9.16
 MAINTANER Emmanuel Nyberg <emmanuel@stickybit.se>
-ENV TYK_VERSION 1.5
-ENV TYK_DASH_VERSION 0.9.3
+ENV TYK_VERSION 1.6
+ENV TYK_DASH_VERSION 0.9.4
 
 RUN	apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
 	echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | tee /etc/apt/sources.list.d/10gen.list && \
  	apt-get update -qq && \
 	apt-get install -y curl gcc make wget mongodb-org && \
-	curl -o /tmp/tyk.deb -SL "https://github.com/lonelycode/tyk/releases/download/${TYK_VERSION}/tyk.linux.amd64_1.5-1_all.deb" && \
+	curl -o /tmp/tyk.deb -SL "https://github.com/lonelycode/tyk/releases/download/${TYK_VERSION}/tyk.linux.amd64_${TYK_VERSION}-1_all.deb" && \
 	dpkg -i /tmp/tyk.deb && \
 	rm -f /tmp/tyk.deb && \
 	cd /tmp && \
